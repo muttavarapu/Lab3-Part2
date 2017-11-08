@@ -3,7 +3,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
-
 import javax.swing.JOptionPane;
 
 /**
@@ -23,6 +22,7 @@ public class GameClient {
         BufferedReader input =
             new BufferedReader(new InputStreamReader(s.getInputStream()));
         PrintWriter w = new PrintWriter(s.getOutputStream(),true);
+		w.println("new");
         String data;
 
             do
@@ -49,9 +49,7 @@ public class GameClient {
         	}
 		 
 		 }
-         if( iData == null){
-             System.out.println("data is null");
-        }     
+             
     }
    public static void makeMove(char[][] game){
 		outerloop:
